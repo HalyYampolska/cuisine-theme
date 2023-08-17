@@ -46,8 +46,8 @@
 
 </div>
 <div class="header__heading heading-primary">
-    <h1 class="heading-1 heading-primary-main mb-sm"><?php the_title(); ?></h1>
-    <h3 class="heading-2 heading-primary-sub ">Subtitle</h3>
+    <h1 class="heading-1 heading-primary-main mb-sm">Ukraine cuisine</h1>
+    <h3 class="heading-2 heading-primary-sub ">create your oun menu with us</h3>
 </div>
 </header>
 
