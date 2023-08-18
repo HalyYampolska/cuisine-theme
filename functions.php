@@ -7,3 +7,10 @@ function cuisine_files() {
 }
 
 add_action('wp_enqueue_scripts', 'cuisine_files');
+
+// Title for page, optional build header menu
+function cuisine_features () {
+    register_nav_menu('headerMenuLocation', 'Header Menu Location'); 
+    add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'cuisine_features');
