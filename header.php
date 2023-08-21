@@ -43,13 +43,7 @@
         </ul>
     </nav>
 
-    <div class="header__heading heading-primary">
-        <h1 class="heading-1 heading-primary-main mb-sm">Ukraine cuisine</h1>
-        <h3 class="heading-2 heading-primary-sub ">Subtitle</h3>
-    </div>
-
     </div>
     
-
 </header>
 

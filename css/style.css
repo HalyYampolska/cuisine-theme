@@ -18,10 +18,12 @@ body {
   font-weight: 300;
   line-height: 1.6; }  
 
+/*
 .container {
   display: grid;
   grid-template-rows: 50vw repeat(4, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+*/
 
 .heading-1, .heading-2, .heading-3 {
   font-family: "Josefin Sans", sans-serif;
@@ -385,8 +387,7 @@ form.active {
 
 .header {
   grid-column: full-start / full-end;
-  background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.8)), url(../img/hero.jpg);
-  background-size: cover; }
+   }
   .header__heading {
     display: grid;
     grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
@@ -818,4 +819,34 @@ form.active {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; 
+}
+
+/* Front Page */ 
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+.hero__image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.8));
+  z-index: -1;
+}
+
+.content-container {
+  position: relative;
+  z-index: 1;
+  /* Add any additional styling you need */
 }

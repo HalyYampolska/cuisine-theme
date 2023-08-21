@@ -1,5 +1,17 @@
 <?php get_header(); ?>
 
+<div class="hero">
+    <div class="hero__image" style="background-image: url(http://ukraine-cuisine.local/wp-content/themes/cuisine-theme/img/hero.jpg)"></div>
+    <div class="content-container">
+        <div class="header__heading heading-primary">
+            <h1 class="heading-1 heading-primary-main mb-sm">Ukrainian Cuisine</h1>
+            <h3 class="heading-2 heading-primary-sub">Subtitle</h3>
+        </div>
+    </div>
+</div>
+
+
+
 <!-- MENU SECTION -->
 <section class="dishes"> 
         <div class="dish">
@@ -235,6 +247,5 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/gal-14.jpg" alt="Gallery image 14" class="gallery__img">
         </figure>
     </section>
-
 <?php
 get_footer(); ?>
