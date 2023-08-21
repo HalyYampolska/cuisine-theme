@@ -654,14 +654,14 @@ form.active {
     border-radius: 3px;
     padding: 10px 15px;
     display: inline-block;
-    margin-bottom: 30px;
+    margin: 5em 0 1em 0;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.07);
 
   }
   .metabox--position-up {
     position: absolute;
     top: 0;
-    transform: translateY(-50%);
+    transform: translateY(-70%);
   }
   .metabox--with-home-link {
     padding: 0;
@@ -713,11 +713,12 @@ form.active {
     position: relative;
     z-index: 1;
     background-color: #FAF0CA;
-    margin: 0 0 20px 0;
+    margin: 5em 0 1em 1em;
   }
+
   @media (min-width: 767px) {
     .page-links {
-      margin: 20px 0 20px 20px;
+      margin: 6.5em 0 1em 1em;
       width: 300px;
       float: right;
     }
@@ -781,7 +782,7 @@ form.active {
     }
 
 .page-container {
-  margin: 0 0 1.65em 0;
+  margin: 5em 0 2em 0;
 }
 
 .page-container p {
