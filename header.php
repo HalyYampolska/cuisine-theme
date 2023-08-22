@@ -12,7 +12,7 @@
 <header class="header">
 
 <div class="navigation">
-    <!-- SEARCH -->
+    <!-- SEARCH 
     <div class="navigation__search" id="search">
         <div id="handle">
             <div id="circle">
@@ -27,6 +27,7 @@
             <input type="submit" id="submit-button" form="form">
         </div>
     </div>
+    -->
     <!-- NAVIGATION -->
     <input type="checkbox" class="sidebar__checkbox" id="navi-toggle">
     <label for="navi-toggle" class="sidebar__button">

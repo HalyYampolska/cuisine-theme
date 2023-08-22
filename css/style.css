@@ -18,12 +18,12 @@ body {
   font-weight: 300;
   line-height: 1.6; }  
 
-/*
+
 .container {
   display: grid;
   grid-template-rows: 50vw repeat(4, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-*/
+
 
 .heading-1, .heading-2, .heading-3 {
   font-family: "Josefin Sans", sans-serif;
@@ -80,8 +80,13 @@ body {
 
 .heading-primary {
   color: #f9f7f6;
-  margin-top: 2rem;
+  margin-top: 10rem;
   backface-visibility: hidden; }
+  @media only screen and (min-width: 320px) {
+    .heading-primary {
+      margin-top: 15rem;
+    }
+  } 
 
 .heading-primary-main {
   display: block;
@@ -252,6 +257,7 @@ body {
 *:focus {
   outline: none; }
 
+  /*
 #search {
   width: -350px; }
 
@@ -384,7 +390,7 @@ form.active {
   top: -4px;
   left: -5px;
   transform: rotateZ(90deg) translateX(10px); }
-
+*/
 .header {
   grid-column: full-start / full-end;
    }
@@ -394,19 +400,36 @@ form.active {
     grid-template-columns: minmax(min-content, max-content);
     grid-row-gap: 1.5rem;
     justify-content: center; }
-    @media only screen and (max-width: 50em) {
+    @media only screen and (min-width: 320px) {
       .header__heading {
-        grid-row-gap: 0; } }
+        grid-template-rows: 1fr min-content minmax(6rem, min-content);
+      }
+    }  
 
 .dishes {
   grid-column: center-start / center-end;
-  margin: 15rem 15rem; /*change*/
+  margin: 10em 20em; /*change*/
   display: grid;
   grid-template-columns: repeat(2, minmax(25rem, 1fr));
   grid-gap: 7rem; }
-  @media only screen and (max-width: 50em) {
+  @media only screen and (min-width: 320px) {
     .dishes {
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } }
+      margin: 5em 5em;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); 
+    }
+  }
+  @media only screen and (min-width: 480px) {
+    .dishes {
+      margin: 12em 5em 5em 5em;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .dishes {
+      margin: 12em 5em 5em 5em;
+      grid-template-columns: repeat(2, minmax(25rem, 1fr));
+    }
+  }
 
 .dish {
   background-color: #f9f7f6;
@@ -451,6 +474,17 @@ form.active {
 .vlog { /*change*/
   display: flex;
 }
+@media only screen and (min-width: 320px) {
+  .vlog {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .vlog {
+    display: flex;
+  }
+}
 
 .vlog__video {
   width: 50%; /*change*/
@@ -465,21 +499,33 @@ form.active {
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(6, 1fr);
   align-items: center; }
-  @media only screen and (max-width: 50em) {
+  /*@media only screen and (max-width: 50em) {
     .vlog__video {
       grid-column: 1 / -1;
-      padding: 6rem; } }
+      padding: 6rem; } }*/
+      @media only screen and (min-width: 320px) {
+        .vlog__video {
+          grid-row: 1/2;
+          width: 100vw;
+          margin-top: 5em;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        .vlog__video {
+          width: 50%;
+        }
+      }
 
 .vlog__video--1 {
   width: 100%;
   grid-row: 2 / 6;
   grid-column: 2 / 6;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1); }
-  @media only screen and (max-width: 50em) {
+  /*@media only screen and (max-width: 50em) {
     .vlog__video--1 {
       grid-column: 1 / 5;
       grid-row: 1 / -1;
-      width: 100%; } }
+      width: 100%; } }*/
 
 .vlog__video--2 {
   width: 120%;
@@ -487,11 +533,16 @@ form.active {
   grid-column: 4 / 7;
   z-index: 20;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1); }
-  @media only screen and (max-width: 50em) {
+  @media only screen and (min-width: 320px) {
     .vlog__video--2 {
-      width: 100%;
-      grid-row: 1 / -1;
-      padding: 3px; } }
+      visibility: hidden;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .vlog__video--2 {
+      width: 120%;
+    }
+  }
 
 .vlog__content {
   width: 50%; /*change*/
@@ -505,10 +556,21 @@ form.active {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; }
-  @media only screen and (max-width: 50em) {
+  /*@media only screen and (max-width: 50em) {
     .vlog__content {
       grid-column: 1 / -1;
-      grid-row: 3 / 4; } }
+      grid-row: 3 / 4; } }*/
+      @media only screen and (min-width: 320px) {
+        .vlog__content {
+          grid-row: 2/3;
+          width: 100vw;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        .vlog__content {
+          width: 50%;
+    }
+  }
 
 .vlog__text {
   font-size: 2rem;
@@ -521,6 +583,11 @@ form.active {
   grid-template-rows: repeat(7, 5vw);
   grid-gap: 1.5rem;
   padding: 1.5rem; }
+  @media only screen and (min-width: 320px) {
+    .gallery {
+      grid-gap: 0.5rem;
+    }
+  }
   .gallery__item--1 {
     grid-row: 1 / span 2;
     grid-column: 1 / span 2; }
@@ -574,9 +641,27 @@ form.active {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;
-  margin: 15rem 15rem 0 15rem; /*change*/
-  padding: 20px;/*change*/
-} 
+  margin: 10em 20em;
+}
+@media only screen and (min-width: 320px) {
+  .myBlog {
+    margin: 6em 4em;
+    grid-gap: 4rem;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .myBlog {
+    margin: 6em 4em;
+    grid-gap: 4rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .myBlog {
+    margin: 6em 4em;
+    grid-gap: 4rem;
+  }
+}
+
 
   .myBlog .topic {
     display: grid;
@@ -608,7 +693,7 @@ form.active {
       color: #f9f7f6;
     }  
     .topic {
-      margin-bottom: 10rem;
+      margin-bottom: 5rem;
     }
     /*change*/
     .topic__name a {
@@ -654,14 +739,19 @@ form.active {
     border-radius: 3px;
     padding: 10px 15px;
     display: inline-block;
-    margin: 5em 0 1em 0;
+    /*margin: 0 0 5em 0;*/
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.07);
-
   }
+  @media only screen and (min-width: 320px) {
+    .metabox {
+      visibility: hidden;
+    }
+  }
+
   .metabox--position-up {
     position: absolute;
     top: 0;
-    transform: translateY(-70%);
+    transform: translateY(-100%);
   }
   .metabox--with-home-link {
     padding: 0;
@@ -699,11 +789,12 @@ form.active {
     background-color: #0a2e4f;
   }
 
+
   .page-section {
     max-width: 960px;
     margin: 0 auto;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem; 
+    /*padding-top: 2em;*/
+    padding-bottom: 4em; 
     position: relative;
     font-size: 2rem;
     line-height: 1.65;
@@ -713,12 +804,11 @@ form.active {
     position: relative;
     z-index: 1;
     background-color: #FAF0CA;
-    margin: 5em 0 1em 1em;
   }
 
   @media (min-width: 767px) {
     .page-links {
-      margin: 6.5em 0 1em 1em;
+      margin: 0 0 1em 1em;
       width: 300px;
       float: right;
     }
@@ -782,17 +872,22 @@ form.active {
     }
 
 .page-container {
-  margin: 5em 0 2em 0;
+ /*margin-top: 10em;*/
 }
 
 .page-container p {
-  padding: 2rem 0 0 0;
+  padding: 10px 0;
 }
 
 .page-content {
   color: #6D5D48;
   font-weight: 300;
-  line-height: 1.6; 
+  line-height: 1.6;
+}
+@media only screen and (min-width: 320px) {
+  .page-content {
+    padding: 2em;
+  }
 }
   
 /* Blog */
@@ -814,6 +909,11 @@ form.active {
   flex-basis: calc(50% - 20px); 
   padding: 25px;
   box-sizing: border-box;
+}
+@media only screen and (min-width: 320px) {
+  .col {
+    flex-basis: auto;
+  }
 }
 
 .blog-container {
@@ -849,15 +949,22 @@ form.active {
 .content-container {
   position: relative;
   z-index: 1;
-  /* Add any additional styling you need */
 }
 
 .blog-page {
   font-weight: 300;
   line-height: 1.6;
-  margin-top: 5em;
+}
+@media only screen and (min-width: 320px) {
+  .blog-page {
+    padding: 2em;
+  }
 }
 
 .blog-page p {
   padding: 1rem 0;
 }
+
+
+
+
