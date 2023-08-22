@@ -2,6 +2,16 @@
 get_header();
 ?>
 
+<div class="hero">
+    <div class="hero__image" style="background-image: url(http://ukraine-cuisine.local/wp-content/themes/cuisine-theme/img/hero.jpg)"></div>
+    <div class="content-container">
+        <div class="header__heading heading-primary">
+            <h1 class="heading-1 heading-primary-main mb-sm">Welcome to the Our Blog</h1>
+            <h3 class="heading-2 heading-primary-sub">Subtitle</h3>
+        </div>
+    </div>
+</div>
+
 <section class="myBlog">
 <div class="blog-container">
         <div class="row">
