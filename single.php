@@ -21,11 +21,14 @@
                         in <?php echo get_the_category_list(', '); ?> </span>
                     </p>
                 </div> 
+                <div class="page-container">
+                    <div class="page-content pd-top"> 
+                        <?php the_content(); ?>
+                    </div>
+                </div>
             </div>
 
-            <div class="page-section blog-page"> 
-                    <?php the_content(); ?>
-            </div>
+            
 
     <?php }
 
