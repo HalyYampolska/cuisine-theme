@@ -474,7 +474,12 @@ form.active {
     font-family: "Josefin Sans", sans-serif;
     z-index: 3;
     text-align: center;
-    padding: 1.25rem; }
+    padding: 1.25rem; 
+  }
+  .dish__name a {
+    text-decoration: none;
+    color: #f9f7f6;
+  }
 
 .vlog { /*change*/
   display: flex;
@@ -845,11 +850,11 @@ form.active {
       margin-top: -3.5em;
     }
   }
-  @media only screen and (min-width: 1280px) {
+  /*@media only screen and (min-width: 1280px) {
     .page-section {
-      max-width: fit-content;
+      max-width: 960px;
     }
-  }
+  }*/
 
   .page-links {
     position: relative;
@@ -1064,4 +1069,9 @@ form.active {
   .pd-top {
     padding-top: 2em;
   }
+}
+
+.metabox-categories {
+  margin-top: 1.5em;
+  margin-left: 2em;
 }
