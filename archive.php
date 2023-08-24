@@ -6,13 +6,8 @@ get_header();
     <div class="hero__image" style="background-image: url(http://ukraine-cuisine.local/wp-content/themes/cuisine-theme/img/hero.jpg)"></div>
     <div class="content-container">
         <div class="header__heading heading-primary">
-            <h1 class="heading-1 heading-primary-main mb-sm"><?php if (is_category()) {
-                single_cat_title();
-            }
-            if (is_author()) {
-                echo 'Articles by '; the_author();
-            } ?></h1>
-            <h3 class="heading-2 heading-primary-sub">Subtitle</h3>
+            <h1 class="heading-1 heading-primary-main mb-sm"><?php the_archive_title(); ?></h1>
+            <h3 class="heading-2 heading-primary-sub"><?php the_archive_description(); ?></h3>
         </div>
     </div>
 </div>
