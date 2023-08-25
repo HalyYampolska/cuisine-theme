@@ -17,8 +17,9 @@
 
 <?php 
     $homepageDishes = new WP_Query(array(
-        'post_per_page' => 8,
-        'post_type' => 'category'
+        'posts_per_page' => -1,
+        'post_type' => 'category',
+        'orderby' => 'title'
     ));
 
     while($homepageDishes->have_posts()) {

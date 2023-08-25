@@ -25,15 +25,24 @@ get_header();
               
 
 <section class="dishes"> 
-        <div class="dish">
-            <svg class="dish__like" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-                <path
-                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-            </svg>
-            <img class="dish__img" src="<?php echo get_template_directory_uri(); ?>/img/soups.jpg" alt="soup">
-            <h2 class="dish__name heading-2">Soups</h2>
-        </div>
+
+<?php 
+    $relatedRecipe = new WP_Query(array(
+        'posts_per_page' => -1,
+        'post_type' => 'recipe',
+        'orderby' => 'title',
+        'order' => 'ASC',
+        'meta_query' => array(
+            array(
+               'key' => 'related_category',
+               'compare' => 'LIKE',
+               'value' => '"' . get_the_ID() . '"' 
+            )
+        )
+    ));
+
+    while($relatedRecipe->have_posts()) {
+        $relatedRecipe->the_post(); ?>
 
         <div class="dish">
             <svg class="dish__like" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -41,70 +50,15 @@ get_header();
                 <path
                     d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
             </svg>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/meat.jpg" alt="meat" class="dish__img">
-            <h2 class="dish__name heading-2">Meat dishes</h2>
+            <img class="dish__img" src="<?php the_field('recipe_photo'); ?>">
+            <h2 class="dish__name heading-2 heading-2--light"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         </div>
 
-        <div class="dish">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/main_course.jpg" alt="main-course" class="dish__img">
-            <svg class="dish__like" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-                <path
-                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-            </svg>
-            <h2 class="dish__name heading-2">Main course</h2>
-        </div>
+    <?php }
+    wp_reset_postdata();
+    ?>
 
-        <div class="dish">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/appetizer.jpg" alt="appetizer" class="dish__img">
-            <svg class="dish__like" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-                <path
-                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-            </svg>
-            <h2 class="dish__name heading-2">Appetizer</h2>
-        </div>
-
-        <div class="dish">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/dessert.jpg" alt="dessert" class="dish__img">
-            <svg class="dish__like" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-                <path
-                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-            </svg>
-            <h2 class="dish__name heading-2">Dessert</h2>
-        </div>
-
-        <div class="dish">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/bread.jpg" alt="bread" class="dish__img">
-            <svg class="dish__like" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-                <path
-                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-            </svg>
-            <h2 class="dish__name heading-2">Bread</h2>
-        </div>
-
-        <div class="dish">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/beverages.jpg" alt="beverages" class="dish__img">
-            <svg class="dish__like" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-                <path
-                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-            </svg>
-            <h2 class="dish__name heading-2">Beverages</h2>
-        </div>
-
-        <div class="dish">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/alcohol.jpg" alt="alcohol" class="dish__img">
-            <svg class="dish__like" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-                <path
-                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-            </svg>
-            <h2 class="dish__name heading-2">Alcohol</h2>
-        </div>
-    </section>
+</section>
 
 <?php
 
