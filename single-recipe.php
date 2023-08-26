@@ -5,7 +5,7 @@ get_header();
 ?>
 
 <div class="hero">
-    <div class="hero__image" style="background-image: url(http://ukraine-cuisine.local/wp-content/themes/cuisine-theme/img/hero.jpg)"></div>
+    <div class="hero__image" style="background-image: url(<?php the_field('recipe_photo'); ?>)"></div>
     <div class="content-container">
         <div class="header__heading heading-primary">
             <h1 class="heading-1 heading-primary-main mb-sm"><?php the_title(); ?></h1>

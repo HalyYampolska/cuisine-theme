@@ -4,6 +4,8 @@
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+
         <?php wp_head(); ?>
         
     </head>
@@ -12,6 +14,10 @@
 <header class="header">
 
 <div class="navigation">
+
+    <span class="js-search-trigger site-header__search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
+    <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
+    
     <!-- SEARCH 
     <div class="navigation__search" id="search">
         <div id="handle">
