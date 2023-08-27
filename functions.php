@@ -5,6 +5,10 @@ function cuisine_files() {
     wp_enqueue_style('fonts-googleapis', '//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i'); 
     wp_enqueue_style('font-awsome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_style('cuisine_main_styles', get_theme_file_uri('/css/style.css'));  
+
+    wp_localize_script('main-cuisine-js', 'cuisineData', array(
+        'root_url' => get_site_url()
+    ));
 }
 
 add_action('wp_enqueue_scripts', 'cuisine_files');

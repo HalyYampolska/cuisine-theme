@@ -13,10 +13,10 @@
 
 <header class="header">
 
-<div class="navigation">
 
-    <span class="js-search-trigger site-header__search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
-    <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
+<div class="search">
+    <span class="js-search-trigger navigation__search"><i class="fa fa-search" aria-hidden="true"></i></span>
+</div>
     
     <!-- SEARCH 
     <div class="navigation__search" id="search">
@@ -35,6 +35,7 @@
     </div>
     -->
     <!-- NAVIGATION -->
+<div class="navigation">
     <input type="checkbox" class="sidebar__checkbox" id="navi-toggle">
     <label for="navi-toggle" class="sidebar__button">
         <span class="sidebar__icon">&nbsp;</span>
@@ -49,8 +50,7 @@
             <li class="sidebar__item"><a href="<?php echo site_url('/for-proposition'); ?>" class="sidebar__link">Come work with us</a></li>
         </ul>
     </nav>
-
-    </div>
+</div>
     
 </header>
 
