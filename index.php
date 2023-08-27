@@ -7,7 +7,7 @@ get_header();
     <div class="content-container">
         <div class="header__heading heading-primary">
             <h1 class="heading-1 heading-primary-main mb-sm">Welcome to the Our Blog</h1>
-            <h3 class="heading-2 heading-primary-sub">Subtitle</h3>
+            <h3 class="heading-2 heading-primary-sub">a lot of useful and interesting information</h3>
         </div>
     </div>
 </div>

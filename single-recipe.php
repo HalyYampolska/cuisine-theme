@@ -60,7 +60,9 @@ get_header();
     <?php the_field('important_info'); ?>
     </p>
 </div>  
-<button class="btn btn-recipe"><a href="">Back to category</a></button>   
+
+<button class="btn btn-recipe"><a href="<?php echo get_post_type_archive_link('category'); ?>">Back to category</a></button>
+
 </div>  
  
 </div>

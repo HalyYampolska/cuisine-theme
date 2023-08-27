@@ -45,7 +45,7 @@
         <ul class="sidebar__list">
             <li class="sidebar__item"><a href="<?php echo site_url(); ?>" class="sidebar__link">Home</a></li>
             <li class="sidebar__item"><a href="<?php echo site_url('/about-us'); ?>" class="sidebar__link">About us</a></li>
-            <li class="sidebar__item"><a href="#" class="sidebar__link" target="_blank">Resepies</a></li>
+            <li class="sidebar__item"><a href="<?php echo site_url('/categories'); ?>" class="sidebar__link" target="_blank">Resepies</a></li>
             <li class="sidebar__item"><a href="<?php echo site_url('/blog'); ?>" class="sidebar__link">Blog</a></li>
             <li class="sidebar__item"><a href="<?php echo site_url('/for-proposition'); ?>" class="sidebar__link">Come work with us</a></li>
         </ul>

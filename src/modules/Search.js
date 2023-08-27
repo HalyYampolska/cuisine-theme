@@ -63,6 +63,10 @@ class Search {
     closeOverlay() {
         this.searchOverlay.removeClass("search-overlay--active");
         $("body").removeClass("body-no-scroll");
+
+        this.searchField.val('');
+        this.resultsDiv.html('');
+        this.isSpinnerVisible = false;
     }
 
     keyPressDispatcher(e) {
