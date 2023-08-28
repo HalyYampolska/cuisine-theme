@@ -6,7 +6,7 @@ get_header();
     <div class="hero__image" style="background-image: url(http://ukraine-cuisine.local/wp-content/themes/cuisine-theme/img/hero.jpg)"></div>
     <div class="content-container">
         <div class="header__heading heading-primary">
-            <h1 class="heading-1 heading-primary-main mb-sm"><?php the_archive_title(); ?></h1>
+        <h1 class="heading-1 heading-primary-main mb-sm"><?php the_archive_title(); ?></h1>
             <h3 class="heading-2 heading-primary-sub"><?php the_archive_description(); ?></h3>
         </div>
     </div>
@@ -17,6 +17,7 @@ get_header();
         <div class="row">
             <?php
             $count = 0;
+            
 
             while (have_posts()) {
                 the_post();
@@ -88,3 +89,4 @@ get_header();
 <?php
 get_footer();
 ?>
+

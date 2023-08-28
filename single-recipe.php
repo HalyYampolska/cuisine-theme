@@ -61,7 +61,7 @@ get_header();
     </p>
 </div>  
 
-<button class="btn btn-recipe"><a href="<?php echo get_post_type_archive_link('category'); ?>">Back to category</a></button>
+<button class="btn btn-recipe"><a href="http://ukraine-cuisine.local/groups/">Back to menu</a></button>
 
 </div>  
  

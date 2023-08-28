@@ -18,7 +18,7 @@ get_header();
 <div class="page-section metabox-categories">
     <div class="metabox metabox--position-up metabox--with-home-link">
         <p>
-            <a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('category'); ?>"><i class="fa fa-home" aria-hidden="true"></i>All Categories</a><span class="metabox__main"><?php the_title(); ?></span>
+            <a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('group'); ?>"><i class="fa fa-home" aria-hidden="true"></i>All Categories</a><span class="metabox__main"><?php the_title(); ?></span>
         </p>
     </div> 
 </div>        
@@ -34,7 +34,7 @@ get_header();
         'order' => 'ASC',
         'meta_query' => array(
             array(
-               'key' => 'related_category',
+               'key' => 'related_group',
                'compare' => 'LIKE',
                'value' => '"' . get_the_ID() . '"' 
             )
